@@ -1,6 +1,4 @@
 const fs = require('fs');
-const args = process.argv;
-const folder = args[args.length - 1];
 
 const packageJSONWriter = require('./writers/package-json-writer');
 const eslintWriter = require('./writers/eslint-writer');
@@ -13,6 +11,9 @@ const { writeIndexJS, writeIndexHTML } = require('./writers/src-index-writer');
 const dependencyInstaller = require('./installer/dependencies-installer');
 const devDependencyInstaller = require('./installer/dev-dependencies-installer');
 
+const args = process.argv;
+const folder = args[args.length - 1];
+
 
 if(folder !== '.') fs.mkdirSync(folder);
 fs.mkdirSync(`${folder}/src`);
@@ -24,7 +25,7 @@ babelWriter(folder);
 webpackWriter(folder);
 gitIgnoreWriter(folder);
 travisWriter(folder);
-writeIndexJS(`${folder}/src/index.js`);
-writeIndexHTML(`${folder}/src/index.html`);
+writeIndexJS(folder);
+writeIndexHTML(folder);
 dependencyInstaller(folder);
 devDependencyInstaller(folder);

@@ -27,11 +27,11 @@ const indexHTMLStr = `<!DOCTYPE html>
 </html>`;
 
 function writeIndexJS(path) {
-  write(path, indexJSStr);
+  write(`${path}/src/index.js`, indexJSStr);
 }
 
 function writeIndexHTML(path) {
-  write(path, indexHTMLStr);
+  write(`${path}/src/index.html`, indexHTMLStr);
 }
 
 
