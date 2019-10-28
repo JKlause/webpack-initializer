@@ -7,5 +7,5 @@ dist
 
 
 module.exports = (path) => {
-  write(path, gitIgnoreStr);
+  write(`${path}/.gitignore`, gitIgnoreStr);
 };

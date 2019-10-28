@@ -87,5 +87,5 @@ const eslintObj = {
 };
 
 module.exports = (path) => {
-  writeJSON(path, eslintObj);
+  writeJSON(`${path}/.eslintrc`, eslintObj);
 };

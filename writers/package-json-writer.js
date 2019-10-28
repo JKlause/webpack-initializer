@@ -66,5 +66,5 @@ const pckgJSONObj = {
 
 
 module.exports = (path) => {
-  writeJSON(path, pckgJSONObj);
+  writeJSON(`${path}/package.json`, pckgJSONObj);
 };

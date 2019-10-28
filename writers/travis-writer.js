@@ -5,5 +5,5 @@ node_js: node`;
 
 
 module.exports = (path) => {
-  write(path, travisStr);
+  write(`${path}/.travis.yml`, travisStr);
 };

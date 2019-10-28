@@ -71,5 +71,5 @@ module.exports = {
 
 
 module.exports = (path) => {
-  write(path, webpackStr);
+  write(`${path}/webpack.config.js`, webpackStr);
 };

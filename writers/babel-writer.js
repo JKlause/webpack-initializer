@@ -11,5 +11,5 @@ const babelObj = {
 };
 
 module.exports = (path) => {
-  writeJSON(path, babelObj);
+  writeJSON(`${path}/.babelrc`, babelObj);
 };
