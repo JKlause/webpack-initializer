@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 
 module.exports = (path, pkgArray, devBool) => {
+  console.log('Dependencies are loading');
   if(devBool) {
     pkgArray.forEach(pkg => execSync(`npm i -D ${pkg}`, {
       cwd: path,
@@ -13,4 +14,5 @@ module.exports = (path, pkgArray, devBool) => {
       stdio: 'inherit'
     }));
   }
+  console.log('Dependencies finished loading');
 };
