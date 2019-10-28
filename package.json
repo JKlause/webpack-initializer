@@ -1,10 +1,13 @@
 {
-  "name": "fsjs-e2e-route-model-quiz",
+  "name": "create-react-to-joe",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "directories": {
     "lib": "lib"
+  },
+  "bin": {
+    "create-react-to-joe": "./index.js"
   },
   "scripts": {
     "lint": "eslint .",
