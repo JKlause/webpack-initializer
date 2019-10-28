@@ -1,6 +1,5 @@
-const { execSync } = require('child_process');
-
 module.exports = (path, pkgArray, devBool) => {
+  const { execSync } = require('child_process');
   console.log('Dependencies are loading');
   if(devBool) {
     pkgArray.forEach(pkg => execSync(`npm i -D ${pkg}`, {
