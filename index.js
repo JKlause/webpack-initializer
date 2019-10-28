@@ -4,6 +4,7 @@ const folder = args[args.length - 1];
 
 const packageJSONWriter = require('./writers/package-json-writer');
 const eslintWriter = require('./writers/eslint-writer');
+const eslintIgnoreWriter = require('./writers/eslint-ignore-writer');
 const babelWriter = require('./writers/babel-writer');
 const webpackWriter = require('./writers/webpack-writer');
 const gitIgnoreWriter = require('./writers/gitignore-writer');
@@ -18,6 +19,7 @@ fs.mkdirSync(`${folder}/src`);
 
 packageJSONWriter(folder);
 eslintWriter(folder);
+eslintIgnoreWriter(folder);
 babelWriter(folder);
 webpackWriter(folder);
 gitIgnoreWriter(folder);
