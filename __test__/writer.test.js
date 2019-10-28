@@ -1,30 +1,26 @@
-const { write, writeJson } = require('../writers/writer');
-const fs = require('fs').promises;
+const { write, writeJSON } = require('../writers/writer');
+const fs = require('fs');
+
+fs.writeFileSync = jest.fn();
 
 describe('writer', () => {
 
-  it('writes a string to a file', () => {
+  it('writes files', () => {
     const str = 'George';
     const path = '__test__/test-data/george.txt';
     write(path, str);
-    fs.readFile(path, 'utf-8')
-      .then(resolved => {
-        expect(resolved).toEqual(str);
-      });
-
+    expect(fs.writeFileSync.mock.calls[0][0]).toBe(path);
+    expect(fs.writeFileSync.mock.calls[0][1]).toBe(str);
   });
+
   it('jsonifies an obj and writes to a file', () => {
     const obj = {
       name: 'joe',
       hair: 'brown'
     };
     const path = '__test__/test-data/json-joe.txt';
-    writeJson(path, obj);
-    fs.readFile(path, 'utf-8')
-      .then(resolved => {
-        expect(resolved).toEqual(JSON.stringify(obj));
-      });
+    writeJSON(path, obj);
+    expect(fs.writeFileSync.mock.calls[1][0]).toBe(path);
+    expect(fs.writeFileSync.mock.calls[1][1]).toEqual(JSON.stringify(obj, null, 2));
   });
-
-
 });
