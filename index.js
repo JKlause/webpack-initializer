@@ -10,6 +10,8 @@ const webpackWriter = require('./writers/webpack-writer');
 const gitIgnoreWriter = require('./writers/gitignore-writer');
 const travisWriter = require('./writers/travis-writer');
 const { writeIndexJS, writeIndexHTML } = require('./writers/src-index-writer');
+const appWriter = require('./writers/App-writer');
+const setupTestsWriter = require('./writers/setupTests');
 const dependencyInstaller = require('./installer/dependencies-installer');
 const devDependencyInstaller = require('./installer/dev-dependencies-installer');
 
@@ -29,5 +31,7 @@ gitIgnoreWriter(folder);
 travisWriter(folder);
 writeIndexJS(folder);
 writeIndexHTML(folder);
+appWriter(folder);
+setupTestsWriter(folder);
 dependencyInstaller(folder);
 devDependencyInstaller(folder);
