@@ -21,6 +21,7 @@ const folder = args[args.length - 1];
 
 if(folder !== '.') fs.mkdirSync(folder);
 fs.mkdirSync(`${folder}/src`);
+fs.mkdirSync(`${folder}/src/components`);
 
 packageJSONWriter(folder);
 eslintWriter(folder);
