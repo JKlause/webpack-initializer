@@ -3,7 +3,6 @@ const { write } = require('./writer');
 
 const webpackStr = `const HtmlPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const dotenvPlugin = require('dotenv-webpack');
 
 
 module.exports = { 
@@ -16,8 +15,7 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({ template: './src/index.html' }),
-    new CleanWebpackPlugin(),
-    new dotenvPlugin()
+    new CleanWebpackPlugin()
   ],
   module: {
     rules: [
