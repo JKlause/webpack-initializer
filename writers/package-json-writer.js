@@ -19,7 +19,7 @@ const pckgJSONObj = {
   },
   'scripts': {
     'test': 'jest --verbose',
-    'test:watch': 'npm run test -- --watch',
+    'test:watch': 'npm run test -- --watchAll',
     'start': 'webpack-dev-server --hot --mode development --devtool eval-source-map',
     'build': 'webpack -p --devtool source-map'
   },
