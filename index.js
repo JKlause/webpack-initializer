@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 
 const packageJSONWriter = require('./writers/package-json-writer');
