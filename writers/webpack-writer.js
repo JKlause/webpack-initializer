@@ -64,7 +64,8 @@ module.exports = {
       }
     ]
   }
-}`;
+};
+`;
 
 
 module.exports = (path) => {
