@@ -18,6 +18,7 @@ const pckgJSONObj = {
     }
   },
   'scripts': {
+    'lint': 'eslint .',
     'test': 'jest --verbose',
     'test:watch': 'npm run test -- --watchAll',
     'start': 'webpack-dev-server --hot --mode development --devtool eval-source-map',
