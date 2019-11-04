@@ -29,7 +29,8 @@ const pckgJSONObj = {
   'license': 'ISC',
   'dependencies': {
     'react': '^16.11.0',
-    'react-dom': '^16.11.0'
+    'react-dom': '^16.11.0',
+    'react-router-dom': '^5.1.2'
   },
   'devDependencies': {
     '@babel/core': '^7.6.4',
