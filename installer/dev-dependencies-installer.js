@@ -5,6 +5,7 @@ const pkgArray = [
   '@babel/plugin-proposal-class-properties',
   '@babel/preset-env',
   '@babel/preset-react',
+  '@types/jest',
   'autoprefixer',
   'babel-eslint',
   'babel-loader',

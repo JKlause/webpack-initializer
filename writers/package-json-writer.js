@@ -37,6 +37,7 @@ const pckgJSONObj = {
     '@babel/plugin-proposal-class-properties': '^7.5.5',
     '@babel/preset-env': '^7.6.3',
     '@babel/preset-react': '^7.6.3',
+    '@types/jest': '^24.0.22',
     'autoprefixer': '^9.7.0',
     'babel-eslint': '^10.0.3',
     'babel-loader': '^8.0.6',
